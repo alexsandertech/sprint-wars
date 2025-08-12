@@ -1,0 +1,162 @@
+/*
+ * Arquivo de estilos para a landing page do Sprint Wars.
+ *
+ * Este CSS define o visual escuro e moderno da página, inspirando‑se na
+ * estética de tecnologia e no material fornecido. As classes estão
+ * organizadas de modo que o layout seja responsivo e legível em
+ * diferentes tamanhos de tela.
+ */
+
+/* Reset básico para remover margens e preenchimentos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografia base */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0D1117; /* tom escuro similar ao da arte enviada */
+  color: #C9D1D9;          /* tom claro para contraste e acessibilidade */
+  line-height: 1.6;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+/* Seção do herói com imagem de fundo */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*
+   * A imagem de fundo da seção herói foi atualizada para uma arte própria
+   * inspirada na original. O arquivo sprint_wars_hero.png contém o texto
+   * "Sprint Wars" com um padrão de ícones flutuantes e uma barra
+   * colorida. Esse recurso ajuda a criar uma identidade visual para o
+   * projeto sem depender da arte de referência.
+   */
+  background-image: url('sprint_wars_hero.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* escurece a imagem para melhorar a legibilidade do texto */
+}
+
+.hero .content {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 1rem;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Botão principal e variações */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #FF5858, #F09819);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #F09819, #FF5858);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #58A6FF;
+  color: #58A6FF;
+}
+
+.btn.secondary:hover {
+  background: #58A6FF;
+  color: #0D1117;
+}
+
+/* Seções de conteúdo */
+section {
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro p {
+  margin-top: 1rem;
+}
+
+/* Cartões para contato e patrocínio */
+.actions .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #161B22;
+  padding: 2rem;
+  border-radius: 12px;
+  flex: 1 1 280px;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+  color: #C9D1D9;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #0D1117;
+  color: #586069;
+  font-size: 0.9rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
